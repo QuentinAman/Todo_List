@@ -1,0 +1,70 @@
+body {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: rgb(237, 237, 237);
+}
+
+.container-h1 {
+    background-color: rgb(34, 34, 34);
+    text-align: center;
+    color: white;
+    padding: 2em;
+}
+
+.container-new-todo {
+    margin: auto;
+    text-align: center;
+    margin: 3em;
+}
+
+.container-new-todo label {
+    display: block;
+    margin-bottom: 1em;
+}
+
+input {
+    border: 0;
+    background-color: transparent;
+    border-bottom: 1px solid rgb(125, 125, 125);
+    margin-right: 1em;
+    outline: none;
+    padding: .4em;
+}
+
+.list-todo {
+    width: fit-content;
+    margin: auto;
+    list-style: none;
+    padding: 0;
+}
+
+.list-todo li {
+    background-color: white;
+    padding: 1em;
+    border: 1px rgb(205, 205, 205) solid;
+}
+
+select {
+    background-color: transparent;
+    padding: .4em;
+    border: 1px rgb(205, 205, 205) solid;
+    margin: 0 .4em;
+}
+
+button {
+    padding: .4em 1em;
+    border: none;
+    background-color: rgb(44, 44, 44);
+    color: white;
+}
+
+button:hover {
+    opacity: .9;
+}
+
+img {
+    width: 1em;
+    height: 1em;
+    margin-left: .4em;
+}
