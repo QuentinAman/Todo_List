@@ -1,0 +1,34 @@
+version: "3"
+
+services:
+  back:
+    image: node:16-alpine
+    container_name: back
+    command: "sh -c 'cd /home/node/app && yarn && yarn dev'"
+    restart: always
+    volumes:
+      - ./back:/home/node/app
+    ports:
+      - 3500:3500
+    environment:
+     - URL_MONGO=mongodb://api:docker1234@mongo
+
+  front:
+    image: node:16-alpine
+    container_name: front
+    command: "sh -c 'cd /home/node/app && yarn && yarn start'"
+    restart: always
+    environment:
+      - NODE_ENV=production
+    volumes:
+      - ./front:/home/node/app
+    ports:
+      - 3000:3000
+
+  mongo:
+    image: mongo:latest
+    ports: 
+      - "27017:27017"
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=api
+      - MONGO_INITDB_ROOT_PASSWORD=docker1234
